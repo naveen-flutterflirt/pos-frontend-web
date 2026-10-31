@@ -2,7 +2,7 @@
   "name": "bizbox-monorepo",
   "version": "1.0.0",
   "private": true,
-  "packageManager": "pnpm@12.16.1",
+  "packageManager": "pnpm@9.15.4",
   "scripts": {
     "dev": "concurrently -n web,pos -c blue,magenta \"pnpm --filter @bizbox/web run dev\" \"pnpm --filter @bizbox/pos run dev\"",
     "dev:turbo": "turbo run dev",
@@ -15,6 +15,7 @@
   },
   "devDependencies": {
     "concurrently": "^10.0.6",
+    "next": "^15.1.7",
     "turbo": "^2.4.4",
     "typescript": "^5.7.3"
   }

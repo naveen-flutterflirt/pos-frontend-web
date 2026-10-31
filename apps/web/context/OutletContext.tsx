@@ -97,7 +97,12 @@ export function OutletProvider({ children }: { children: React.ReactNode }) {
 export function useOutlet() {
   const context = useContext(OutletContext);
   if (!context) {
-    throw new Error('useOutlet must be used within an OutletProvider');
+    return {
+      outlets: DEFAULT_OUTLETS,
+      selectedOutlet: DEFAULT_OUTLETS[0],
+      setSelectedOutlet: () => { },
+      selectOutletByCode: () => { },
+    };
   }
   return context;
 }
