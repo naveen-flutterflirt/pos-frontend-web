@@ -1,0 +1,21 @@
+{
+  "name": "bizbox-monorepo",
+  "version": "1.0.0",
+  "private": true,
+  "packageManager": "pnpm@12.16.1",
+  "scripts": {
+    "dev": "concurrently -n web,pos -c blue,magenta \"pnpm --filter @bizbox/web run dev\" \"pnpm --filter @bizbox/pos run dev\"",
+    "dev:turbo": "turbo run dev",
+    "dev:web": "pnpm --filter @bizbox/web run dev",
+    "dev:pos": "pnpm --filter @bizbox/pos run dev",
+    "build": "turbo run build",
+    "lint": "turbo run lint",
+    "typecheck": "turbo run typecheck",
+    "clean": "turbo run clean && rimraf node_modules"
+  },
+  "devDependencies": {
+    "concurrently": "^10.0.6",
+    "turbo": "^2.4.4",
+    "typescript": "^5.7.3"
+  }
+}

@@ -1,0 +1,9 @@
+node_modules
+.next
+dist
+.turbo
+.DS_Store
+*.local
+.env*.local
+pnpm-debug.log*
+

@@ -1,0 +1,7 @@
+{
+  "name": "@bizbox/config",
+  "version": "1.0.0",
+  "private": true,
+  "main": "tailwind.preset.js"
+}
+
